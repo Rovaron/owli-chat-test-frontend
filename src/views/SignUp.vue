@@ -263,12 +263,13 @@ export default {
             this.isLoadingCep = false
           })
           .catch((error) => {
-            console.log(error)
-            this.cepFound = false
-            this.isLoadingCep = false
-            this.$nextTick(() => {
-              this.$refs.cep.validate()
-            })
+            if (error) {
+              this.cepFound = false
+              this.isLoadingCep = false
+              this.$nextTick(() => {
+                this.$refs.cep.validate()
+              })
+            }
           })
       }
     },

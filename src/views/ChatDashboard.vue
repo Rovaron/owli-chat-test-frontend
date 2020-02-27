@@ -37,7 +37,7 @@
       dark
       :clipped-left="true"
     >
-      <v-app-bar-nav-icon @click="drawer = !drawer" v-if="smAndDown"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
       <img :src="require('@/assets/logo_owli_branco.png')" alt="logo" class="app-logo">
       <v-spacer></v-spacer>
       <v-menu bottom left>
